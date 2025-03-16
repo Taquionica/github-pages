@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taquionica - Inteligência e Conectividade</title>
+  <style>
+    /* Estilos CSS */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header {
+      background: #333;
+      color: #fff;
+      padding: 10px 0;
+    }
+
+    header .logo {
+      height: 50px;
+    }
+
+    nav select {
+      padding: 5px;
+      font-size: 16px;
+    }
+
+    .hero {
+      background: #007BFF;
+      color: #fff;
+      text-align: center;
+      padding: 100px 0;
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+    }
+
+    .cta-button {
+      background: #FFC107;
+      color: #333;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.1em;
+    }
+
+    .services, .products, .testimonials {
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    .service-item, .product-item {
+      margin: 20px 0;
+    }
+
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      padding: 10px;
+      border-radius: 50%;
+    }
+
+    .whatsapp-button img {
+      width: 30px;
+      height: 30px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <div class="container">
+      <img src="logo.png" alt="Taquionica Logo" class="logo">
+      <nav>
+        <select id="language-select">
+          <option value="pt-BR">Português</option>
+          <option value="es">Español</option>
+          <option value="en">English</option>
+        </select>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Seção Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 id="hero-title">Soluções Inteligentes para um Mundo Conectado</h1>
+      <p id="hero-subtitle">Desenvolvimento de hardware, firmware e software sob medida para suas necessidades.</p>
+      <a href="https://wa.me/5516993668447" class="cta-button" target="_blank">Fale Conosco no WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- Seção de Serviços -->
+  <section class="services">
+    <div class="container">
+      <h2 id="services-title">Nossos Serviços</h2>
+      <div class="service-item">
+        <h3>Desenvolvimento de Hardware</h3>
+        <p>Soluções personalizadas para suas necessidades de hardware.</p>
+      </div>
+      <div class="service-item">
+        <h3>Desenvolvimento de Firmware</h3>
+        <p>Firmware otimizado para desempenho e eficiência.</p>
+      </div>
+      <div class="service-item">
+        <h3>Desenvolvimento de Software</h3>
+        <p>Aplicativos e sistemas sob medida para sua empresa.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de Produtos -->
+  <section class="products">
+    <div class="container">
+      <h2 id="products-title">Nossos Kits</h2>
+      <div class="product-item">
+        <img src="kit1.jpg" alt="Kit 1">
+        <h3>Kit de Desenvolvimento IoT</h3>
+        <p>Conecte seus dispositivos com facilidade.</p>
+      </div>
+      <div class="product-item">
+        <img src="kit2.jpg" alt="Kit 2">
+        <h3>Kit de Automação Industrial</h3>
+        <p>Automatize processos com tecnologia avançada.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de Depoimentos -->
+  <section class="testimonials">
+    <div class="container">
+      <h2 id="testimonials-title">O que nossos clientes dizem</h2>
+      <div class="testimonial-item">
+        <p>"A Taquionica transformou nosso negócio com soluções personalizadas!"</p>
+        <span>- Cliente Satisfeito</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="container">
+      <p>Contato: contato@taquionica.com | +55 16 99366-8447</p>
+      <div class="social-links">
+        <a href="#">Facebook</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão Fixo do WhatsApp -->
+  <a href="https://wa.me/5516993668447" class="whatsapp-button" target="_blank">
+    <img src="whatsapp-icon.png" alt="WhatsApp">
+  </a>
+
+  <!-- Script para mudança de idioma -->
+  <script>
+    // Função para mudar o idioma
+    document.getElementById('language-select').addEventListener('change', function() {
+      const language = this.value;
+      changeLanguage(language);
+    });
+
+    function changeLanguage(language) {
+      const translations = {
+        'pt-BR': {
+          heroTitle: 'Soluções Inteligentes para um Mundo Conectado',
+          heroSubtitle: 'Desenvolvimento de hardware, firmware e software sob medida para suas necessidades.',
+          servicesTitle: 'Nossos Serviços',
+          productsTitle: 'Nossos Kits',
+          testimonialsTitle: 'O que nossos clientes dizem'
+        },
+        'es': {
+          heroTitle: 'Soluciones Inteligentes para un Mundo Conectado',
+          heroSubtitle: 'Desarrollo de hardware, firmware y software a medida para sus necesidades.',
+          servicesTitle: 'Nuestros Servicios',
+          productsTitle: 'Nuestros Kits',
+          testimonialsTitle: 'Lo que dicen nuestros clientes'
+        },
+        'en': {
+          heroTitle: 'Smart Solutions for a Connected World',
+          heroSubtitle: 'Custom hardware, firmware, and software development for your needs.',
+          servicesTitle: 'Our Services',
+          productsTitle: 'Our Kits',
+          testimonialsTitle: 'What Our Clients Say'
+        }
+      };
+
+      document.getElementById('hero-title').textContent = translations[language].heroTitle;
+      document.getElementById('hero-subtitle').textContent = translations[language].heroSubtitle;
+      document.getElementById('services-title').textContent = translations[language].servicesTitle;
+      document.getElementById('products-title').textContent = translations[language].productsTitle;
+      document.getElementById('testimonials-title').textContent = translations[language].testimonialsTitle;
+    }
+  </script>
+</body>
+</html>
